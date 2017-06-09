@@ -1,0 +1,31 @@
+
+void insertionSort (string *arr , int n)
+{
+    for (int a = 0 ; a<n-1 ; a++)
+    {
+       
+        int b = a+1;
+
+
+
+    while(b>=0&& arr[b][0]<=arr[b-1][0] )
+    {
+       int c = 0;
+        int size1= arr[b].length();
+        int size2= arr[b-1].length();
+
+        while(c<size1&&c<size2)
+        {
+            if(arr[b][c]<arr[b-1][c])
+            {
+                swap(&arr[b],&arr[b-1]);
+                c = 0;
+                break;
+            }
+            c++;
+        }
+        b--;
+    }
+
+    }
+}
